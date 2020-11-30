@@ -1,13 +1,8 @@
-let a: number;
-let b: number;
-let tempf = 60
 while (true) {
     console.log("Temperature (F): " + input.temperature(TemperatureUnit.Fahrenheit))
-    a = 40
-    b = 90
-    if (a < b) {
+    if (input.temperature(TemperatureUnit.Fahrenheit) > 70) {
         light.setPixelColor(5, light.rgb(255, 0, 0))
-    } else if (tempf < 70) {
+    } else if (input.temperature(TemperatureUnit.Celsius) < 45) {
         light.setPixelColor(5, light.rgb(0, 255, 0))
     } else {
         light.setPixelColor(5, light.rgb(0, 0, 255))
